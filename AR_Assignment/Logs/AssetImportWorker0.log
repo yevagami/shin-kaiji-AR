@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2023.1.13f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/kaiji-AR/AR_Assignment
+C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/shin-kaiji-AR/AR_Assignment
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65479
-Successfully changed project path to: C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/kaiji-AR/AR_Assignment
-C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/kaiji-AR/AR_Assignment
+62773
+Successfully changed project path to: C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/shin-kaiji-AR/AR_Assignment
+C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/shin-kaiji-AR/AR_Assignment
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,16 +49,16 @@ C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/kaiji-AR/AR_Assignment
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [6560] Host "[IP] 10.111.27.236 [Port] 0 [Flags] 2 [Guid] 2708601486 [EditorId] 2708601486 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TE9V0I7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [22904] Host "[IP] 10.111.27.236 [Port] 0 [Flags] 2 [Guid] 687826701 [EditorId] 687826701 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TE9V0I7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [6560] Host "[IP] 10.111.27.236 [Port] 0 [Flags] 2 [Guid] 2708601486 [EditorId] 2708601486 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TE9V0I7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [22904] Host "[IP] 10.111.27.236 [Port] 0 [Flags] 2 [Guid] 687826701 [EditorId] 687826701 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TE9V0I7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
-Library Redirect Path: Library/Refreshing native plugins compatible for Editor in 16.51 ms, found 4 plugins.
+Library Redirect Path: Library/Refreshing native plugins compatible for Editor in 16.28 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.1.13f1 (ffeab063bb93)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2023.1.13f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/kaiji-AR/AR_Assignment/Assets
+[Subsystems] Discovering subsystems at path C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/shin-kaiji-AR/AR_Assignment/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -70,7 +70,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2023.1.13f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2023.1.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2023.1.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56856
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56432
 Begin MonoManager ReloadAssembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
@@ -86,46 +86,46 @@ Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.1.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.1.13f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.1.13f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Registered in 0.010464 seconds.
-- Loaded All Assemblies, in  0.600 seconds
+Registered in 0.008994 seconds.
+- Loaded All Assemblies, in  0.459 seconds
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 413 ms
+Android Extension - Scanning For ADB Devices 291 ms
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Finished resetting the current domain, in  1.001 seconds
-Domain Reload Profiling: 1598ms
-	BeginReloadAssembly (176ms)
+- Finished resetting the current domain, in  0.722 seconds
+Domain Reload Profiling: 1178ms
+	BeginReloadAssembly (150ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (44ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (78ms)
-	LoadAllAssembliesAndSetupDomain (280ms)
-		LoadAssemblies (172ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (191ms)
+		LoadAssemblies (146ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (271ms)
-			TypeCache.Refresh (270ms)
-				TypeCache.ScanAssembly (254ms)
+		AnalyzeDomain (183ms)
+			TypeCache.Refresh (182ms)
+				TypeCache.ScanAssembly (169ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1002ms)
+	FinalizeReload (723ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (937ms)
+		SetupLoadedEditorAssemblies (672ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (594ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (16ms)
-			ProcessInitializeOnLoadAttributes (233ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
+			InitializePlatformSupportModulesInManaged (425ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (7ms)
+			ProcessInitializeOnLoadAttributes (163ms)
+			ProcessInitializeOnLoadMethodAttributes (73ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -146,114 +146,114 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-Symbol file data-00000283E323E020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-000002A8599DB6E0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4BE25C0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file data-000002A855B69040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283BF4395C0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file data-000002A85A0AC020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.InputSystem.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E323E020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll
+Symbol file data-000002A8599DB6E0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4BE25C0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.InputSystem.TestFramework.dll
+Symbol file data-000002A859AE35C0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.InputSystem.TestFramework.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7C7F010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file data-000002A856D5F010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Mathematics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4BCB6A0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file data-000002A8569CB020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E3737F00 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file data-000002A85707F020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E5047010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-000002A85872A490 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4C2CF70 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-000002A8569F99F0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4BCB6A0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file data-000002A8569F99F0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Settings.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E375B110 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file data-000002A8569F99F0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4BCB6A0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file data-000002A856A00800 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4BCB6A0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file data-000002A856A00800 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E35DD010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-000002A8572FB020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E375B110 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-000002A8570A2230 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E375B110 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-000002A85675BA20 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7354020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-000002A8566B8010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7441020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file data-000002A855A6BDB0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E6509CD0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file data-000002A855ADFA50 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E79D44D0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file data-000002A856634010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E79D44D0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file data-000002A856634010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E468A630 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file data-000002A856826620 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E468A630 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file data-000002A856826620 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4BCB6A0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file data-000002A85A157A40 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283BF4DCBD0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file data-000002A85A157A40 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283BF4DCBD0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000002A85A157A40 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E323E020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARAnalytics.Editor.dll
+Symbol file data-000002A855B69040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARAnalytics.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283BF4DCBD0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARCore.dll
+Symbol file data-000002A85A157A40 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARCore.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7A052F0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARCore.Editor.dll
+Symbol file data-000002A85A161850 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARCore.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7102020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARFoundation.dll
+Symbol file data-000002A856652830 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARFoundation.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283BF4E69E0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARFoundation.Editor.dll
+Symbol file data-000002A857A3F090 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARFoundation.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E323E020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARFoundation.InternalUtils.dll
+Symbol file data-000002A8570BC840 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARFoundation.InternalUtils.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E37BB030 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARKit.dll
+Symbol file data-000002A857A3F090 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARKit.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7A0C900 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARKit.Editor.dll
+Symbol file data-000002A8583B6040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARKit.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E3774B20 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARKit.FaceTracking.dll
+Symbol file data-000002A857A4D0A0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARKit.FaceTracking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E44BF630 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARSubsystems.dll
+Symbol file data-000002A85737F020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARSubsystems.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4C34F80 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARSubsystems.Editor.dll
+Symbol file data-000002A8583B6040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARSubsystems.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E711F030 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll
+Symbol file data-000002A857395A30 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7A0C900 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll
+Symbol file data-000002A8573A2A40 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E37C9040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Management.dll
+Symbol file data-000002A857336E30 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Management.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E5247020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll
+Symbol file data-000002A8573D7010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E5264230 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Simulation.dll
+Symbol file data-000002A8573F4220 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Simulation.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E527A840 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Simulation.Editor.dll
+Symbol file data-000002A85740A830 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Simulation.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E323E020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file data-000002A856826620 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7A9E010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-000002A85873A4A0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7AB7020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-000002A85740A830 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E37C9040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file data-000002A857336E30 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E468A630 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file data-000002A857336E30 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E7AB7020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-000002A855A6BDB0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E5047010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-000002A858499010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000283E4C34F80 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file data-000002A8573BB450 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\kaiji-AR\AR_Assignment\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.430 seconds
-Refreshing native plugins compatible for Editor in 6.46 ms, found 4 plugins.
+Symbol file LoadedFromMemory doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.433 seconds
+Refreshing native plugins compatible for Editor in 6.61 ms, found 4 plugins.
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
@@ -268,46 +268,46 @@ Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  1.139 seconds
-Domain Reload Profiling: 2560ms
-	BeginReloadAssembly (388ms)
+- Finished resetting the current domain, in  1.109 seconds
+Domain Reload Profiling: 2531ms
+	BeginReloadAssembly (373ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (11ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (48ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (908ms)
-		LoadAssemblies (552ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (895ms)
+		LoadAssemblies (562ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (500ms)
-			TypeCache.Refresh (465ms)
-				TypeCache.ScanAssembly (446ms)
-			ScanForSourceGeneratedMonoScriptInfo (27ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (1140ms)
+		AnalyzeDomain (492ms)
+			TypeCache.Refresh (455ms)
+				TypeCache.ScanAssembly (436ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1109ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (847ms)
+		SetupLoadedEditorAssemblies (843ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (48ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (245ms)
-			ProcessInitializeOnLoadAttributes (481ms)
-			ProcessInitializeOnLoadMethodAttributes (53ms)
-			AfterProcessingInitializeOnLoad (12ms)
+			InitializePlatformSupportModulesInManaged (40ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (243ms)
+			ProcessInitializeOnLoadAttributes (494ms)
+			ProcessInitializeOnLoadMethodAttributes (51ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 10.66 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 7.65 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4366 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 57 unused Assets / (1.1 MB). Loaded Objects now: 4901.
 Memory consumption went from 157.4 MB to 156.3 MB.
-Total: 9.782600 ms (FindLiveObjects: 1.016400 ms CreateObjectMapping: 0.473400 ms MarkObjects: 7.326400 ms  DeleteObjects: 0.965100 ms)
+Total: 6.141900 ms (FindLiveObjects: 0.340400 ms CreateObjectMapping: 0.467300 ms MarkObjects: 4.568800 ms  DeleteObjects: 0.763800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -324,33 +324,349 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 40887.275439 seconds.
-  path: Packages/com.unity.xr.arkit
-  artifactKey: Guid(14a7b9fbd8baa420acbfbe76d44812c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.xr.arkit using Guid(14a7b9fbd8baa420acbfbe76d44812c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd67fd00aa9ae710794aeb05eb04d4806') in 0.003182 seconds
+  Time since last request: 42179.162341 seconds.
+  path: Assets/Scenes/Test_Scene.unity
+  artifactKey: Guid(673cf7e185a767b4697a4e625cd29821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test_Scene.unity using Guid(673cf7e185a767b4697a4e625cd29821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45542488a44f985a22c293dd6ba686bf') in 0.004267 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 3.456221 seconds.
-  path: Packages/com.unity.xr.arkit/Assets
-  artifactKey: Guid(264fa44cd6dc4474696989400b5fe298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.xr.arkit/Assets using Guid(264fa44cd6dc4474696989400b5fe298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff06463a65c51616363009ca903179e') in 0.000614 seconds
+  Time since last request: 0.000079 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(3c0ca661ae85d2d448b1b54167b65ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(3c0ca661ae85d2d448b1b54167b65ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f6d9a6a54bd448d3c2fddc8ec0169cd') in 0.000547 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 150.850410 seconds.
-  path: Assets/XR/UserSimulationSettings
-  artifactKey: Guid(43e50eff5369b764aa0c71ed6fdd0533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/XR/UserSimulationSettings using Guid(43e50eff5369b764aa0c71ed6fdd0533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efb2252537d81ba99da3ac5262310f3c') in 0.000730 seconds
+  Time since last request: 292.880529 seconds.
+  path: Assets/Models
+  artifactKey: Guid(b38a062710eccb54da355b4922008ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models using Guid(b38a062710eccb54da355b4922008ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1aa1f671c6d4c5334fa295e9e313151') in 0.000858 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 1.243217 seconds.
-  path: Assets/Scenes/AR Scene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/AR Scene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16da961830b82c8e93e083464f286c84') in 0.000812 seconds
+  Time since last request: 4.171454 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(f94aa87354666ff408bd33ab879194cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(f94aa87354666ff408bd33ab879194cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aae7e135c320a1054da5beee5aea1f3') in 0.000461 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 8.336866 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(58e331aac53ea32458dffff076d3a846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(58e331aac53ea32458dffff076d3a846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc3a46ca474913cf2f80fc375b1805b5') in 0.000590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Symbol file data-000002A864248010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A864248010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A865D36020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.InputSystem.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A864248010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A864248010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.InputSystem.TestFramework.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A856D5F010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8582D68B0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8599B78D0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A859C22930 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85ADE5020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8582A8C40 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A864D8C020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A856D0B030 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A856D0B030 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8572FB020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A858693220 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8569D4040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8566B8010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A855ADFA50 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8567B8010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A831488180 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A855613010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A856D0B030 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A856D0B030 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A856D0B030 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85ADE5020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85ADE5020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8586AD830 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARAnalytics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8553FE1D0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARCore.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A856D0B030 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARCore.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A86377A010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARFoundation.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85886EC50 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARFoundation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85A00C640 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARFoundation.InternalUtils.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8643CF010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARKit.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8642D8020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARKit.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8586AD830 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARKit.FaceTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A864A61020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARSubsystems.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A857B4B020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.ARSubsystems.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8643CF010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A864A77A30 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A857B4B020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Management.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85A952040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8643CF010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Simulation.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85A952040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\Unity.XR.Simulation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8550AEA20 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A855613010 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85A952040 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85AE1E050 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A85AE1E050 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A859B4B9E0 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A86455E020 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002A8550AEA20 doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Adriel\School\Humber\Sem 3\Game Engines 3 (Unity)\shin-kaiji-AR\AR_Assignment\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.062 seconds
+Refreshing native plugins compatible for Editor in 5.83 ms, found 4 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  1.168 seconds
+Domain Reload Profiling: 2223ms
+	BeginReloadAssembly (236ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (59ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (727ms)
+		LoadAssemblies (458ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (380ms)
+			TypeCache.Refresh (370ms)
+				TypeCache.ScanAssembly (356ms)
+			ScanForSourceGeneratedMonoScriptInfo (4ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1168ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (609ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (36ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (177ms)
+			ProcessInitializeOnLoadAttributes (346ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 5.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4341 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (1.1 MB). Loaded Objects now: 4904.
+Memory consumption went from 153.2 MB to 152.2 MB.
+Total: 4.898700 ms (FindLiveObjects: 0.290000 ms CreateObjectMapping: 0.329400 ms MarkObjects: 3.660200 ms  DeleteObjects: 0.618200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 135.632471 seconds.
+  path: Assets/Scenes/Test_Scene.unity
+  artifactKey: Guid(673cf7e185a767b4697a4e625cd29821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test_Scene.unity using Guid(673cf7e185a767b4697a4e625cd29821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcbe3b9ffc254e035ac90584784c12cb') in 0.002937 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.062049 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(58e331aac53ea32458dffff076d3a846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(58e331aac53ea32458dffff076d3a846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bda1e913f4b79bcc60a9ca3c02a53d8b') in 0.000538 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 232.743905 seconds.
+  path: Assets/Images
+  artifactKey: Guid(b31071e28fe84984886ec9efea8aa6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images using Guid(b31071e28fe84984886ec9efea8aa6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55a31efdbe4967dcf3eab175f2d65621') in 0.000778 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 29.912758 seconds.
+  path: Assets/Images/card_paper.png
+  artifactKey: Guid(7009fc23e7deea745a1deac36df41673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/card_paper.png using Guid(7009fc23e7deea745a1deac36df41673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '642d97fa7da452e4fb7d6da54d39ac7a') in 0.067024 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 530.953403 seconds.
+  path: Assets/Images/card_back.png
+  artifactKey: Guid(55d42a8b83713474e87adceffcdf8e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/card_back.png using Guid(55d42a8b83713474e87adceffcdf8e20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '163039b889225326cc66fa03d07d3f63') in 0.017525 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 552.276535 seconds.
+  path: Assets/Fonts
+  artifactKey: Guid(0237f641ba4f5ba40880657c02c0ed13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts using Guid(0237f641ba4f5ba40880657c02c0ed13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca59443c3cc9698ee5d6a67292961c0c') in 0.001086 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 10.631289 seconds.
+  path: Assets/pumpkin muffin.png
+  artifactKey: Guid(283415787f6938e47833ffd06b85d84e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/pumpkin muffin.png using Guid(283415787f6938e47833ffd06b85d84e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '671f021a7e6b664cd20c4d771a5d56dc') in 0.017460 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.552545 seconds.
+  path: Assets/Pumpkin Muffin.ttf
+  artifactKey: Guid(0e474b0480ea3a542b14a5d907a676e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pumpkin Muffin.ttf using Guid(0e474b0480ea3a542b14a5d907a676e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daa1c2029a11df751cbcfbe57609ae37') in 0.075042 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 22.713312 seconds.
+  path: Assets/Fonts/Pumpkin Muffin.otf
+  artifactKey: Guid(bb760146af890f540b5559cbdccb0974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Pumpkin Muffin.otf using Guid(bb760146af890f540b5559cbdccb0974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc3c7984253f03ad618a47245d41ee8c') in 0.011277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 21.170261 seconds.
+  path: Assets/Fonts/Pumpkin Muffin SDF.asset
+  artifactKey: Guid(7c885ff46dc5ea84d91110d1fefaf9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Pumpkin Muffin SDF.asset using Guid(7c885ff46dc5ea84d91110d1fefaf9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) UnassignedReferenceException: The variable material of TMP_FontAsset has not been assigned.
+You probably need to assign the material variable of the TMP_FontAsset script in the inspector.
+  at UnityEngine.Object+MarshalledUnityObject.ThrowNullExceptionObjectImpl (System.Object obj) [0x000c2] in <d0f92ebb771e4783b0ea9f13bfbe129b>:0 
+  at UnityEngine.Object+MarshalledUnityObject.MarshalNullCheck[T] (T obj) [0x00017] in <d0f92ebb771e4783b0ea9f13bfbe129b>:0 
+  at UnityEngine.Material.HasProperty (System.Int32 nameID) [0x00000] in <d0f92ebb771e4783b0ea9f13bfbe129b>:0 
+  at TMPro.TMP_FontAsset.ReadFontAssetDefinition () [0x000a9] in <9e7d379d8ccc44b0a02186d347f34e72>:0 
+  at TMPro.TMP_FontAsset.OnValidate () [0x00019] in <9e7d379d8ccc44b0a02186d347f34e72>:0 
+
+ -> (artifact id: '3996c8958296113a800675c360e82e50') in 0.012184 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 118.429838 seconds.
+  path: Assets/Fonts/Pumpkin Muffin.ttf
+  artifactKey: Guid(0e474b0480ea3a542b14a5d907a676e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Pumpkin Muffin.ttf using Guid(0e474b0480ea3a542b14a5d907a676e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f374eb903660851004130f6e2833a8cd') in 0.015552 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 29.245099 seconds.
+  path: Assets/Fonts/Pumpkin Muffin SDF.asset
+  artifactKey: Guid(7c885ff46dc5ea84d91110d1fefaf9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Pumpkin Muffin SDF.asset using Guid(7c885ff46dc5ea84d91110d1fefaf9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc5d2e67c4dc93e388ed853ee71b45f') in 0.106588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 66.547165 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0cbf5f30de9f9af4a46619f908a2412') in 0.051684 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 65.921665 seconds.
+  path: Assets/Fonts/Pumpkin Muffin 2.asset
+  artifactKey: Guid(2612bfc1228b6354583d0f67cd35b331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Pumpkin Muffin 2.asset using Guid(2612bfc1228b6354583d0f67cd35b331) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+ -> (artifact id: '16ccea002bdb14705ff32e62692b7ba9') in 0.090732 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
