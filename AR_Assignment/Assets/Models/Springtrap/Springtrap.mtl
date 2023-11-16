@@ -1,0 +1,21 @@
+newmtl acmat_0
+Kd 1 1 1
+Ka 1 1 1
+Ks 1 1 1
+Ns 12.8
+Tr 0
+map_Kd SprinE.png
+newmtl acmat_1
+Kd 0.25098 0.25098 0.25098
+Ka 0.25098 0.25098 0.25098
+Ks 0.25098 0.25098 0.25098
+Ns 12.8
+Tr 0
+map_Kd SprS.png
+newmtl acmat_2
+Kd 0.0627451 0.141176 0.0431373
+Ka 0.0627451 0.141176 0.0431373
+Ks 0.0627451 0.141176 0.0431373
+Ns 12.8
+Tr 0
+map_Kd Spri.png
