@@ -368,21 +368,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards:
-  - {fileID: 3132470030754896083, guid: 40ba96fe6af4c914e8759970f984d77b, type: 3}
   - {fileID: 7395353589469413454, guid: 148cc4d0839a50241b9abe14df9ddd59, type: 3}
+  - {fileID: 3132470030754896083, guid: 40ba96fe6af4c914e8759970f984d77b, type: 3}
   - {fileID: 232371440532529268, guid: 0f116d49ec0f8324aa28325790e78700, type: 3}
   playerCardPositions:
-  - {fileID: 903664926}
-  - {fileID: 1055361827}
-  - {fileID: 788028251}
-  - {fileID: 597294497}
-  - {fileID: 2063274809}
+  - {fileID: 903664927}
+  - {fileID: 1055361828}
+  - {fileID: 788028252}
+  - {fileID: 597294498}
+  - {fileID: 2063274810}
   enemyCardPositions:
-  - {fileID: 778348026}
-  - {fileID: 1163062134}
-  - {fileID: 2026303081}
-  - {fileID: 1859455929}
-  - {fileID: 1824580525}
+  - {fileID: 778348027}
+  - {fileID: 1163062135}
+  - {fileID: 2026303082}
+  - {fileID: 1859455930}
+  - {fileID: 1824580526}
+  playerPlayPosition: {fileID: 1454336079}
+  enemyPlayPosition: {fileID: 837684791}
   canvasUIParent: {fileID: 1932441688}
 --- !u!1 &597294497
 GameObject:
@@ -789,7 +791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &837684791
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1540,7 +1542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1454336079
 RectTransform:
   m_ObjectHideFlags: 0
