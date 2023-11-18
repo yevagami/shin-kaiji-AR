@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 49297654035702535}
   - component: {fileID: 3132481118219721842}
-  - component: {fileID: 347886193976225248}
   - component: {fileID: 1969536221663691926}
   - component: {fileID: 3155357445063009364}
   - component: {fileID: 6209506483617596504}
+  - component: {fileID: -8378432327036082422}
   m_Layer: 0
   m_Name: AR Plane
   m_TagString: Untagged
@@ -50,20 +50,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DestroyOnRemoval: 1
   m_VertexChangedThreshold: 0.01
---- !u!114 &347886193976225248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2535998525555774420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d180956a54db4646a1c6342921672ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackingStateVisibilityThreshold: 1
-  m_HideSubsumed: 1
 --- !u!64 &1969536221663691926
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -114,7 +100,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3661386612265093630, guid: 840b0daf119129145ab6e72b1c23ef31, type: 3}
+  - {fileID: 2100000, guid: 2224e9a650d7b904b86ed58b08ff4b36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,3 +122,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-8378432327036082422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535998525555774420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d180956a54db4646a1c6342921672ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackingStateVisibilityThreshold: 2
+  m_HideSubsumed: 1
