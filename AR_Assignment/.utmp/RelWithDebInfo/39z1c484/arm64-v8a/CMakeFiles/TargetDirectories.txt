@@ -1,0 +1,5 @@
+C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/shin-kaiji-AR/AR_Assignment/.utmp/RelWithDebInfo/39z1c484/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/shin-kaiji-AR/AR_Assignment/.utmp/RelWithDebInfo/39z1c484/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/shin-kaiji-AR/AR_Assignment/.utmp/RelWithDebInfo/39z1c484/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/shin-kaiji-AR/AR_Assignment/.utmp/RelWithDebInfo/39z1c484/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Adriel/School/Humber/Sem 3/Game Engines 3 (Unity)/shin-kaiji-AR/AR_Assignment/.utmp/RelWithDebInfo/39z1c484/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

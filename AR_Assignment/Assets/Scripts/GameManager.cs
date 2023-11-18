@@ -5,14 +5,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //card data struct
-struct card{
+enum condition{ win = 1, lose = -1, draw = 0 }
+enum cardType { rock = 0, paper = 1, scissors = 2 };
+public struct card{
     public GameObject cardObject;
     public int type;
+    public int cardPos;
 }
 
-public class GameManager : MonoBehaviour{
+public class GameManager : MonoBehaviour {
     // Start is called before the first frame update
-    enum cardType { rock = 0, paper = 1, scissors = 2 };
     [SerializeField] GameObject[] cards;
     [SerializeField] GameObject[] playerCardPositions;
     [SerializeField] GameObject[] enemyCardPositions;
@@ -27,29 +29,36 @@ public class GameManager : MonoBehaviour{
     int enemyScore = 0;
 
 
-    void Start(){
+    void Start() {
         shuffleCards();
     }
 
+
     // Update is called once per frame
-    void Update(){
-        
+    void Update() {
+
     }
 
-    
-    public void shuffleCards(){
+
+    public void shuffleCards() {
         //Shuffle player cards
-        for(int i = 0; i < playerCardPositions.Length; i++) {
-            if(playerCards[i].cardObject != null){
+        for (int i = 0; i < playerCardPositions.Length; i++) {
+            if (playerCards[i].cardObject != null) {
                 Destroy(playerCards[i].cardObject);
             }
 
+            //Creating the card
             int cardIndex = Random.Range(0, 3);
             playerCards[i].cardObject = Instantiate(cards[cardIndex], playerCardPositions[i].transform.position, Quaternion.identity);
             playerCards[i].cardObject.transform.SetParent(canvasUIParent.transform);
             playerCards[i].type = cardIndex;
+            playerCards[i].cardPos = i;
+
+            //Setting the card info
+            playerCards[i].cardObject.GetComponent<clickCard>().cardInfo = playerCards[i];
         }
 
+        /*
         //Shuffle the enemy's cards
         for (int i = 0; i < enemyCardPositions.Length; i++)
         {
@@ -61,16 +70,40 @@ public class GameManager : MonoBehaviour{
             enemyCards[i].cardObject = Instantiate(cards[cardIndex], playerCardPositions[i].transform.position, Quaternion.identity);
             enemyCards[i].type = cardIndex;
         }
+        */
     }
-    
+
+    condition compareCards(card card1, card card2){
+        //Guard clause to check if it's a draw 
+        //Exits early
+        if(card1.type == card2.type){
+            return condition.draw;
+        }
+
+        //rock vs scissors
+        if(card1.type == (int)cardType.rock && card2.type == (int)cardType.scissors)
+        {
+            return condition.win;
+        }
+
+        //scissors vs paper
+        if (card1.type == (int)cardType.scissors && card2.type == (int)cardType.paper)
+        {
+            return condition.win;
+        }
+
+        //paper vs rock
+        if (card1.type == (int)cardType.paper && card2.type == (int)cardType.rock)
+        {
+            return condition.win;
+        }
+
+        //otherwise you lose bozo
+        return condition.lose;
+    }
+
     //Button methods
-    public void playRockCard() {
-        Debug.Log("Click on rock");
-    }
-    public void playScissorsCard() {
-        Debug.Log("Click on scissors");
-    }
-    public void playPaperCard() {
-        Debug.Log("Click on paper");
+    public void playCard(card card_, GameObject object_){
+        Destroy(playerCards[card_.cardPos].cardObject);
     }
 }

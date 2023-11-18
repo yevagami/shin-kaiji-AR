@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4119601308221219905}
   - component: {fileID: 8991693833396682552}
   - component: {fileID: 2593391132062305260}
-  - component: {fileID: 4432814254562474403}
+  - component: {fileID: 4116211865480432319}
   m_Layer: 0
   m_Name: Scissors Card
   m_TagString: Untagged
@@ -130,7 +130,7 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
---- !u!114 &4432814254562474403
+--- !u!114 &4116211865480432319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 232371440532529268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83cf899c3fde6444d99627ea52f1bf1b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b126b3cf95200e4eb03a35a4614869b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   butt: {fileID: 8991693833396682552}
