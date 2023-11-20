@@ -386,6 +386,9 @@ MonoBehaviour:
   playerPlayPosition: {fileID: 1454336079}
   enemyPlayPosition: {fileID: 837684791}
   canvasUIParent: {fileID: 1932441688}
+  leftText: {fileID: 747883855}
+  rightText: {fileID: 44908660}
+  middleText: {fileID: 1345650629}
 --- !u!1 &597294497
 GameObject:
   m_ObjectHideFlags: 0

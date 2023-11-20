@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +8,7 @@ using UnityEngine.UI;
 //card data struct
 enum condition{ win = 1, lose = -1, draw = 0 }
 enum cardType { rock = 0, paper = 1, scissors = 2 };
-enum states { start, play, compare, end}
+enum states { start, idle, play, compare, end, destroy}
 public struct card{
     public GameObject cardObject;
     public int type;
@@ -16,12 +17,20 @@ public struct card{
 
 public class GameManager : MonoBehaviour {
     // Start is called before the first frame update
+    [Header("Card objects")]
     [SerializeField] GameObject[] cards; //card prefabs
+
+    [Header("Card positions")]
     [SerializeField] Transform[] playerCardPositions; //Where the player's cards are gonna be 
     [SerializeField] Transform[] enemyCardPositions; //Where the enemy's cards are gonna be 
     [SerializeField] Transform playerPlayPosition; //Where the player's selected cards are gonna be
     [SerializeField] Transform enemyPlayPosition; //Where the enemy's selected cards are gonna be 
+
+    [Header("Canvas stuff")]
     [SerializeField] GameObject canvasUIParent; //Reference to the UI canvas 
+    [SerializeReference] TextMeshProUGUI leftText;
+    [SerializeReference] TextMeshProUGUI rightText;
+    [SerializeReference] TextMeshProUGUI middleText;
 
     //Array containing the cards of the player and enemy
     card[] playerCards = new card[5];
@@ -38,6 +47,9 @@ public class GameManager : MonoBehaviour {
     //State machine
     states currentState = states.start;
 
+    //Debuging stuff
+    int count = 0;
+
     void Start() {
     }
 
@@ -47,17 +59,34 @@ public class GameManager : MonoBehaviour {
         switch(currentState) { 
             case states.start:
                 shuffleCards();
-                currentState = states.play;
+                currentState = states.idle;
+                break;
+
+            case states.idle:
                 break;
 
             case states.play:
+                if(playerSelected.cardObject != null){
+                    if (enemyPlayCard()) {
+                        renderPlayCards();
+                        currentState = states.compare;
+                    }
+                }
                 break;
-
 
             case states.compare:
-                Debug.Log(compareCards(playerSelected, enemySelected));
+                compareCardsState();
+                break;
+
+            case states.destroy:
+                StartCoroutine(destroyCards());
                 break;
         }
+
+        //Update ui stuff
+        leftText.text = "Player " + playerScore;
+        rightText.text = enemyScore + " Enemy";
+        //Debug.Log(currentState);
     }
 
 
@@ -94,6 +123,11 @@ public class GameManager : MonoBehaviour {
 
             //note, the enemy's card is not set to the canvas ui
             //this is so that it doesn't render after shuffling, cause that will be cheating
+
+            //for debug purposes
+            //prints the card now renders on the screen
+            enemyCards[i].cardObject.transform.SetParent(canvasUIParent.transform);
+            enemyCards[i].cardObject.transform.localScale = enemyCardPositions[i].transform.localScale;
         }
         
     }
@@ -117,29 +151,74 @@ public class GameManager : MonoBehaviour {
     }
 
     //Button methods
-    public void playCard(card card_, GameObject object_){
+    public void playCard(card card_){
         //Selecting cards are only allowed on the play state
-        if(currentState != states.play){
-            Debug.Log("Not the time!");
+        if (currentState != states.idle){
             return;
         }
 
-        //Moves the player's card to the designated position
-        object_.transform.position = playerPlayPosition.position;
-        object_.transform.localScale = playerPlayPosition.localScale;
+        count++;
+       
         playerSelected = card_;
 
+        currentState = states.play;
+    }
+
+    //Play the enemy card
+    public bool enemyPlayCard(){
         //Moves the enemy's card to the designated position
-        int selectedCard = Random.Range(0, 5); //Randomly pick which card for the enemy to play
+        int selectedCard = Random.Range(0, enemyCards.Length); //Randomly pick which card for the enemy to play
 
-        //Set the position of the card to be on its designated position
-        enemyCards[selectedCard].cardObject.transform.position = enemyPlayPosition.position;
-        enemyCards[selectedCard].cardObject.transform.localScale = enemyPlayPosition.localScale;
+        //Picks another random card if that specific card has been played
+        if(!enemyCards[selectedCard].cardObject){ 
+            return false; 
+        }
 
-        //Set the parent of the card to be the canvas ui
-        //otherwise it will not render
-        enemyCards[selectedCard].cardObject.transform.SetParent(canvasUIParent.transform);
+        if (count == 2)
+        {
+            Debug.Log("");
+        }
+
         enemySelected = enemyCards[selectedCard];
-        currentState = states.compare;
+        return true;
+    }
+
+    public void renderPlayCards(){
+        playerSelected.cardObject.transform.position = playerPlayPosition.transform.position;
+        playerSelected.cardObject.transform.localScale = playerPlayPosition.transform.localScale;
+
+        enemySelected.cardObject.transform.position = enemyPlayPosition.transform.position;
+        enemySelected.cardObject.transform.localScale = enemyPlayPosition.transform.localScale;
+        enemySelected.cardObject.transform.SetParent(canvasUIParent.transform);
+    }
+
+    void compareCardsState(){ 
+        condition result = compareCards(playerSelected, enemySelected);
+        Debug.Log(result);
+        switch (result)
+        {
+            case condition.lose:
+                enemyScore += 1;
+                break;
+
+            case condition.win:
+                playerScore += 1;
+                break;
+
+            case condition.draw:
+                break;
+        }
+
+        currentState = states.idle;
+    }
+
+    IEnumerator destroyCards() {
+        yield return new WaitForSeconds(1);
+
+        Destroy(playerCards[playerSelected.cardPos].cardObject);
+        Destroy(enemyCards[enemySelected.cardPos].cardObject);
+
+        Destroy(playerSelected.cardObject);
+        Destroy(enemySelected.cardObject);
     }
 }

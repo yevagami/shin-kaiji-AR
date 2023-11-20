@@ -10,6 +10,6 @@ public class clickCard : MonoBehaviour{
 
     private void Awake(){
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
-        butt.onClick.AddListener(() => gameManager.playCard(cardInfo, gameObject));
+        butt.onClick.AddListener(() => gameManager.playCard(cardInfo));
     }
 }
