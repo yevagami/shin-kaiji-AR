@@ -36,11 +36,14 @@ public class GameManager : MonoBehaviour {
     [Header("Card objects")]
     [SerializeField] GameObject[] cards; //card prefabs
 
-    [Header("Card positions")]
+    [Header("Player Cards")]
     [SerializeField] Transform[] playerCardPositions; //Where the player's cards are gonna be 
-    [SerializeField] Transform[] enemyCardPositions; //Where the enemy's cards are gonna be 
     [SerializeField] Transform playerPlayPosition; //Where the player's selected cards are gonna be
+
+    [Header("Enemy Cards")]
+    [SerializeField] Transform[] enemyCardPositions; //Where the enemy's cards are gonna be 
     [SerializeField] Transform enemyPlayPosition; //Where the enemy's selected cards are gonna be 
+    [SerializeField] GameObject[] enemyCardsInScene;
 
     [Header("Canvas stuff")]
     [SerializeField] GameObject canvasUIParent; //Reference to the UI canvas 
@@ -70,20 +73,20 @@ public class GameManager : MonoBehaviour {
     //Debuging stuff
     int count = 0;
 
-    void Start() {
-    }
-
+    //For the sake of rendering the cards irl
+    int enemyCardCount = 0;
 
     // Update is called once per frame
     void Update() {
         switch(currentState) { 
             case states.start:
-                shuffleCards();
+                ShuffleCards();
+                RenderEnemyCards();
                 currentState = states.idle;
                 break;
 
             case states.idle:
-                if (checkEndGame()){
+                if (CheckEndGame()){
                     currentState = states.end;
                 }
                 break;
@@ -92,13 +95,14 @@ public class GameManager : MonoBehaviour {
                 if(playerSelected.Object != null){
                     if (enemyPlayCard()) {
                         renderPlayCards();
+                        RenderEnemyCards();
                         currentState = states.compare;
                     }
                 }
                 break;
 
             case states.compare:
-                compareCardsState();
+                CompareCardsState();
                 break;
 
             case states.destroy:
@@ -106,7 +110,7 @@ public class GameManager : MonoBehaviour {
                     timer += Time.deltaTime;
                 }
                 else{
-                    destroyCards();
+                    DestroyCards();
                     timer = 0;
                 }
                 
@@ -120,120 +124,10 @@ public class GameManager : MonoBehaviour {
         //Debug.Log(currentState);
     }
 
-    
 
-    condition compareCards(card card1, card card2){
-        //Guard clause to check if it's a draw 
-        //Exits early
-        if(card1.type == card2.type){ return condition.draw; }
 
-        //rock vs scissors
-        if(card1.type == (int)cardType.rock && card2.type == (int)cardType.scissors) { return condition.win; }
-
-        //scissors vs paper
-        if (card1.type == (int)cardType.scissors && card2.type == (int)cardType.paper){ return condition.win; }
-
-        //paper vs rock
-        if (card1.type == (int)cardType.paper && card2.type == (int)cardType.rock) { return condition.win; }
-
-        //otherwise you lose bozo
-        return condition.lose;
-    }
-
-    //Play the enemy card
-    bool enemyPlayCard(){
-        int selectedCard = Random.Range(0, enemyCards.Length); //Randomly pick which card for the enemy to play
-
-        //Picks another random card if that specific card has been played
-        if(enemyCards[selectedCard] == null){ 
-            return false; }
-
-        enemySelected = enemyCards[selectedCard];
-        return true;
-    }
-
-    void renderPlayCards(){
-        playerSelected.Object.transform.position = playerPlayPosition.transform.position;
-        playerSelected.Object.transform.localScale = playerPlayPosition.transform.localScale;
-
-        enemySelected.Object.transform.position = enemyPlayPosition.transform.position;
-        enemySelected.Object.transform.localScale = enemyPlayPosition.transform.localScale;
-        enemySelected.Object.transform.SetParent(canvasUIParent.transform);
-    }
-
-    void compareCardsState(){ 
-        condition result = compareCards(playerSelected, enemySelected);
-       
-        switch (result){
-            case condition.lose:
-                enemyScore += 1;
-                break;
-
-            case condition.win:
-                playerScore += 1;
-                break;
-
-            case condition.draw:
-                break;
-        }
-        Debug.Log(
-            "Playerscore: " + playerScore + " " + "Enemyscore: " + enemyScore
-            );
-
-        //Update ui 
-        leftText.text = "Player " + playerScore;
-        rightText.text = enemyScore + " Enemy";
-
-        currentState = states.destroy;
-    }
-
-    void destroyCards() {
-        playerCards[playerSelected.cardPos].OnDestroy();
-        enemyCards[enemySelected.cardPos].OnDestroy();  
-
-        enemyCards[enemySelected.cardPos] = null;
-        playerCards[playerSelected.cardPos] = null;
-
-        playerSelected.OnDestroy();
-        enemySelected.OnDestroy();
-
-        playerSelected = null;
-        enemySelected = null;
-
-        currentState = states.idle;
-    }
-
-    bool checkEndGame(){
-        int count = 0;
-        for(int i = 0; i < playerCards.Length; i++){
-            if (playerCards[i] != null) { count++; }
-        }
-        if(count == 0) { return true; }
-
-        return false;
-    }
-
-    condition checkEndGameCondition() {
-        if(playerScore > enemyScore) { return condition.win; }
-        if(enemyScore > playerScore) { return condition.lose; }
-        return condition.draw;
-    }
-
-    void EndGame(){
-        middleText.text = checkEndGameCondition().ToString();
-    }
-
-    //Button method
-    public void playCard(int cardPos){
-        //Selecting cards are only allowed on the play state
-        if (currentState != states.idle){
-            return;
-        }
-       
-        playerSelected = playerCards[cardPos];
-        currentState = states.play;
-    }
-    public void shuffleCards()
+    //Start state
+    public void ShuffleCards()
     {
         //Shuffle player cards
         for (int i = 0; i < playerCardPositions.Length; i++)
@@ -252,6 +146,7 @@ public class GameManager : MonoBehaviour {
 
 
         //Shuffle the enemy's cards
+        enemyCardCount = 0;
         for (int i = 0; i < enemyCardPositions.Length; i++)
         {
             if (enemyCards[i] != null)
@@ -266,7 +161,148 @@ public class GameManager : MonoBehaviour {
 
             //note, the enemy's card is not set to the canvas ui
             //this is so that it doesn't render after shuffling, cause that will be cheating
+
+            //Adds 1 to the card count
+            enemyCardCount += 1;
         }
 
+    }
+
+    //Play state
+    public void PlayCard(int cardPos){
+            //Selecting cards are only allowed on the play state
+            if (currentState != states.idle){
+                return;
+            }
+       
+            playerSelected = playerCards[cardPos];
+            currentState = states.play;
+    }
+    bool enemyPlayCard()
+    {
+        int selectedCard = Random.Range(0, enemyCards.Length); //Randomly pick which card for the enemy to play
+
+        //Picks another random card if that specific card has been played
+        if (enemyCards[selectedCard] == null)
+        {
+            return false;
+        }
+
+        enemyCardCount -= 1;
+        enemySelected = enemyCards[selectedCard];
+        return true;
+    }
+    void renderPlayCards()
+    {
+        playerSelected.Object.transform.position = playerPlayPosition.transform.position;
+        playerSelected.Object.transform.localScale = playerPlayPosition.transform.localScale;
+
+        enemySelected.Object.transform.position = enemyPlayPosition.transform.position;
+        enemySelected.Object.transform.localScale = enemyPlayPosition.transform.localScale;
+        enemySelected.Object.transform.SetParent(canvasUIParent.transform);
+    }
+
+    //Compare state
+    void CompareCardsState()
+    {
+        condition result = CompareCards(playerSelected, enemySelected);
+        if(result == condition.lose){
+            enemyScore += 1;
+        }
+
+        if(result == condition.win)
+        {
+            playerScore += 1;
+        }
+        
+        Debug.Log(
+            "Playerscore: " + playerScore + " " + "Enemyscore: " + enemyScore
+            );
+
+        //Update ui 
+        middleText.text = "VS";
+        leftText.text = "Player " + playerScore.ToString();
+        rightText.text = enemyScore.ToString() + " Enemy";
+
+        currentState = states.destroy;
+    }
+    condition CompareCards(card card1, card card2){
+        //Guard clause to check if it's a draw 
+        //Exits early
+        if(card1.type == card2.type){ return condition.draw; }
+
+        //rock vs scissors
+        if(card1.type == (int)cardType.rock && card2.type == (int)cardType.scissors) { return condition.win; }
+
+        //scissors vs paper
+        if (card1.type == (int)cardType.scissors && card2.type == (int)cardType.paper){ return condition.win; }
+
+        //paper vs rock
+        if (card1.type == (int)cardType.paper && card2.type == (int)cardType.rock) { return condition.win; }
+
+        //otherwise you lose bozo
+        return condition.lose;
+    }
+
+    //Destroy state
+    void DestroyCards() {
+        playerCards[playerSelected.cardPos].OnDestroy();
+        enemyCards[enemySelected.cardPos].OnDestroy();  
+
+        enemyCards[enemySelected.cardPos] = null;
+        playerCards[playerSelected.cardPos] = null;
+
+        playerSelected.OnDestroy();
+        enemySelected.OnDestroy();
+
+        playerSelected = null;
+        enemySelected = null;
+
+        middleText.text = "";
+        currentState = states.idle;
+    }
+
+    //Idle state
+    bool CheckEndGame(){
+        int count = 0;
+        for(int i = 0; i < playerCards.Length; i++){
+            if (playerCards[i] != null) { count++; }
+        }
+        if(count == 0) { return true; }
+
+        return false;
+    }
+    condition CheckEndGameCondition() {
+        if(playerScore > enemyScore) { return condition.win; }
+        if(enemyScore > playerScore) { return condition.lose; }
+        return condition.draw;
+    }
+
+    //End state
+    void EndGame(){
+        middleText.text = CheckEndGameCondition().ToString();
+    }
+
+    //Reset the game back to normal
+    public void Reset(){
+        playerScore = 0;
+        enemyScore = 0;
+
+        middleText.text = "";
+        leftText.text = "Player " + playerScore.ToString();
+        rightText.text = enemyScore.ToString() + " Enemy";
+
+        currentState = states.start;
+    }
+
+    //Render the cards in the scene next to the opponent
+    void RenderEnemyCards(){
+        for(int i = 0; i < enemyCardsInScene.Length; i++){
+            enemyCardsInScene[i].SetActive(false);
+        }
+
+        for(int i = 0; i < enemyCardCount; i++){
+            enemyCardsInScene[i].SetActive(true);
+        }
     }
 }
