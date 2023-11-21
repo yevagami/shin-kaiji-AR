@@ -5,17 +5,33 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-//card data struct
-enum condition{ win = 1, lose = -1, draw = 0 }
-enum cardType { rock = 0, paper = 1, scissors = 2 };
-enum states { start, idle, play, compare, end, destroy}
-public struct card{
-    public GameObject cardObject;
-    public int type;
-    public int cardPos;
-}
+
 
 public class GameManager : MonoBehaviour {
+    //card data struct
+    enum condition { win = 1, lose = -1, draw = 0 }
+    enum cardType { rock = 0, paper = 1, scissors = 2 };
+    enum states { start, idle, play, compare, end, destroy }
+
+    //Card class 
+    public class card{
+        public GameObject Object;
+        public int type;
+        public int cardPos;
+
+        //Constructor
+        public card(GameObject object_, int type_, int cardPos_){
+            type = type_;
+            cardPos = cardPos_;
+            Object = object_;
+        }
+
+        //Function to destroy object
+        public void OnDestroy(){
+            if (Object != null) { Destroy(Object); }
+        }
+    }
+
     // Start is called before the first frame update
     [Header("Card objects")]
     [SerializeField] GameObject[] cards; //card prefabs
@@ -44,6 +60,10 @@ public class GameManager : MonoBehaviour {
     int playerScore = 0;
     int enemyScore = 0;
 
+    //Timer before the cards are destroy
+    float timer = 0;
+    float timerDuration = 1;
+
     //State machine
     states currentState = states.start;
 
@@ -63,10 +83,13 @@ public class GameManager : MonoBehaviour {
                 break;
 
             case states.idle:
+                if (checkEndGame()){
+                    currentState = states.end;
+                }
                 break;
 
             case states.play:
-                if(playerSelected.cardObject != null){
+                if(playerSelected.Object != null){
                     if (enemyPlayCard()) {
                         renderPlayCards();
                         currentState = states.compare;
@@ -79,58 +102,25 @@ public class GameManager : MonoBehaviour {
                 break;
 
             case states.destroy:
-                StartCoroutine(destroyCards());
+                if(timer < timerDuration){
+                    timer += Time.deltaTime;
+                }
+                else{
+                    destroyCards();
+                    timer = 0;
+                }
+                
+                break;
+                
+            case states.end:
+                EndGame();
                 break;
         }
 
-        //Update ui stuff
-        leftText.text = "Player " + playerScore;
-        rightText.text = enemyScore + " Enemy";
         //Debug.Log(currentState);
     }
 
-
-    public void shuffleCards() {
-        //Shuffle player cards
-        for (int i = 0; i < playerCardPositions.Length; i++) {
-            if (playerCards[i].cardObject != null) {
-                Destroy(playerCards[i].cardObject);
-            }
-
-            //Creating the card
-            int cardIndex = Random.Range(0, 3);
-            playerCards[i].cardObject = Instantiate(cards[cardIndex], playerCardPositions[i].position, Quaternion.identity);
-            playerCards[i].cardObject.transform.SetParent(canvasUIParent.transform);
-            playerCards[i].type = cardIndex;
-            playerCards[i].cardPos = i;
-
-            //Setting the card info
-            playerCards[i].cardObject.GetComponent<clickCard>().cardInfo = playerCards[i];
-        }
-
-        
-        //Shuffle the enemy's cards
-        for (int i = 0; i < enemyCardPositions.Length; i++)
-        {
-            if (enemyCards[i].cardObject != null){
-                Destroy(enemyCards[i].cardObject);
-            }
-
-            int cardIndex = Random.Range(0, 3);
-            enemyCards[i].cardObject = Instantiate(cards[cardIndex], enemyCardPositions[i].position, Quaternion.identity);
-            enemyCards[i].type = cardIndex;
-            enemyCards[i].cardPos = i;
-
-            //note, the enemy's card is not set to the canvas ui
-            //this is so that it doesn't render after shuffling, cause that will be cheating
-
-            //for debug purposes
-            //prints the card now renders on the screen
-            enemyCards[i].cardObject.transform.SetParent(canvasUIParent.transform);
-            enemyCards[i].cardObject.transform.localScale = enemyCardPositions[i].transform.localScale;
-        }
-        
-    }
+    
 
     condition compareCards(card card1, card card2){
         //Guard clause to check if it's a draw 
@@ -150,53 +140,31 @@ public class GameManager : MonoBehaviour {
         return condition.lose;
     }
 
-    //Button methods
-    public void playCard(card card_){
-        //Selecting cards are only allowed on the play state
-        if (currentState != states.idle){
-            return;
-        }
-
-        count++;
-       
-        playerSelected = card_;
-
-        currentState = states.play;
-    }
-
     //Play the enemy card
-    public bool enemyPlayCard(){
-        //Moves the enemy's card to the designated position
+    bool enemyPlayCard(){
         int selectedCard = Random.Range(0, enemyCards.Length); //Randomly pick which card for the enemy to play
 
         //Picks another random card if that specific card has been played
-        if(!enemyCards[selectedCard].cardObject){ 
-            return false; 
-        }
-
-        if (count == 2)
-        {
-            Debug.Log("");
-        }
+        if(enemyCards[selectedCard] == null){ 
+            return false; }
 
         enemySelected = enemyCards[selectedCard];
         return true;
     }
 
-    public void renderPlayCards(){
-        playerSelected.cardObject.transform.position = playerPlayPosition.transform.position;
-        playerSelected.cardObject.transform.localScale = playerPlayPosition.transform.localScale;
+    void renderPlayCards(){
+        playerSelected.Object.transform.position = playerPlayPosition.transform.position;
+        playerSelected.Object.transform.localScale = playerPlayPosition.transform.localScale;
 
-        enemySelected.cardObject.transform.position = enemyPlayPosition.transform.position;
-        enemySelected.cardObject.transform.localScale = enemyPlayPosition.transform.localScale;
-        enemySelected.cardObject.transform.SetParent(canvasUIParent.transform);
+        enemySelected.Object.transform.position = enemyPlayPosition.transform.position;
+        enemySelected.Object.transform.localScale = enemyPlayPosition.transform.localScale;
+        enemySelected.Object.transform.SetParent(canvasUIParent.transform);
     }
 
     void compareCardsState(){ 
         condition result = compareCards(playerSelected, enemySelected);
-        Debug.Log(result);
-        switch (result)
-        {
+       
+        switch (result){
             case condition.lose:
                 enemyScore += 1;
                 break;
@@ -208,17 +176,97 @@ public class GameManager : MonoBehaviour {
             case condition.draw:
                 break;
         }
+        Debug.Log(
+            "Playerscore: " + playerScore + " " + "Enemyscore: " + enemyScore
+            );
+
+        //Update ui 
+        leftText.text = "Player " + playerScore;
+        rightText.text = enemyScore + " Enemy";
+
+        currentState = states.destroy;
+    }
+
+    void destroyCards() {
+        playerCards[playerSelected.cardPos].OnDestroy();
+        enemyCards[enemySelected.cardPos].OnDestroy();  
+
+        enemyCards[enemySelected.cardPos] = null;
+        playerCards[playerSelected.cardPos] = null;
+
+        playerSelected.OnDestroy();
+        enemySelected.OnDestroy();
+
+        playerSelected = null;
+        enemySelected = null;
 
         currentState = states.idle;
     }
 
-    IEnumerator destroyCards() {
-        yield return new WaitForSeconds(1);
+    bool checkEndGame(){
+        int count = 0;
+        for(int i = 0; i < playerCards.Length; i++){
+            if (playerCards[i] != null) { count++; }
+        }
+        if(count == 0) { return true; }
 
-        Destroy(playerCards[playerSelected.cardPos].cardObject);
-        Destroy(enemyCards[enemySelected.cardPos].cardObject);
+        return false;
+    }
 
-        Destroy(playerSelected.cardObject);
-        Destroy(enemySelected.cardObject);
+    condition checkEndGameCondition() {
+        if(playerScore > enemyScore) { return condition.win; }
+        if(enemyScore > playerScore) { return condition.lose; }
+        return condition.draw;
+    }
+
+    void EndGame(){
+        middleText.text = checkEndGameCondition().ToString();
+    }
+
+    //Button method
+    public void playCard(int cardPos){
+        //Selecting cards are only allowed on the play state
+        if (currentState != states.idle){
+            return;
+        }
+       
+        playerSelected = playerCards[cardPos];
+        currentState = states.play;
+    }
+    public void shuffleCards()
+    {
+        //Shuffle player cards
+        for (int i = 0; i < playerCardPositions.Length; i++)
+        {
+            if (playerCards[i] != null)
+            {
+                Destroy(playerCards[i].Object);
+            }
+
+            //Creating the card
+            int cardIndex = Random.Range(0, 3);
+            playerCards[i] = new card(Instantiate(cards[cardIndex], playerCardPositions[i].position, Quaternion.identity, canvasUIParent.transform), cardIndex, i);
+            playerCards[i].Object.GetComponent<clickCard>().cardPos = i;
+
+        }
+
+
+        //Shuffle the enemy's cards
+        for (int i = 0; i < enemyCardPositions.Length; i++)
+        {
+            if (enemyCards[i] != null)
+            {
+                Destroy(enemyCards[i].Object);
+            }
+
+            int cardIndex = Random.Range(0, 3);
+            enemyCards[i] = new card(Instantiate(cards[cardIndex], enemyCardPositions[i].position, Quaternion.identity), cardIndex, i);
+            enemyCards[i].Object.transform.localScale = enemyCardPositions[i].transform.localScale;
+            enemyCards[i].Object.GetComponent<clickCard>().cardPos = i;
+
+            //note, the enemy's card is not set to the canvas ui
+            //this is so that it doesn't render after shuffling, cause that will be cheating
+        }
+
     }
 }

@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class clickCard : MonoBehaviour{
     [SerializeField] Button butt;
     GameManager gameManager;
-    public card cardInfo;
+    public int cardPos;
 
     private void Awake(){
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
-        butt.onClick.AddListener(() => gameManager.playCard(cardInfo));
+        butt.onClick.AddListener(() => gameManager.playCard(cardPos));
     }
 }
