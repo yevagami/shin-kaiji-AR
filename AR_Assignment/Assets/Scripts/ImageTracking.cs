@@ -5,10 +5,13 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
+using TMPro;
 
 public class ImageTracking : MonoBehaviour{
     [SerializeField] ARTrackedImageManager imageManagerRef;
     [SerializeField] GameObject OBJECT;
+    [SerializeField] TextMeshProUGUI SelectedEnemyRef;
     GameObject spawnedObject;
 
     [Header("Debugging")]

@@ -14,6 +14,9 @@ public class ButtonBehaviour : MonoBehaviour {
     [Tooltip("a reference to the pause menu CANVAS")]
     public GameObject pauseMenuCanvasRef;
 
+    [Tooltip("a reference to the scan menu CANVAS")]
+    public GameObject scanMenuCanvasRef;
+
     [Tooltip("a reference to the object containing GAME")]
     public GameManager gameRef;
 
@@ -28,6 +31,9 @@ public class ButtonBehaviour : MonoBehaviour {
 
     [Tooltip("is the pause menu shown? is it active?")]
     public bool isPauseMenuOpen;
+
+    [Tooltip("is the scan menu shown? is it active?")]
+    public bool isScanMenuOpen;
 
     #region abstract THIS
     //  temp 'hard code' (its not a real reference)
@@ -57,12 +63,15 @@ public class ButtonBehaviour : MonoBehaviour {
     {
         debugStrip.log("scan enemy button clicked");
         //  call the function to allow the player to start tracking the camera in order to figure out what they're aiming at
-        
-        
+
+
         //  stuff
-        
-        
-        isEnemyScanned = true;
+
+        //isEnemyScanned = true;
+
+        isScanMenuOpen = true;
+        isPauseMenuOpen = false;
+        isMainMenuOpen = false;
     }
 
     public void LeaveButtonCallback()
@@ -91,6 +100,7 @@ public class ButtonBehaviour : MonoBehaviour {
 
     public void ReturnToMainButtonCallback(){
         isPauseMenuOpen = false;
+        isScanMenuOpen = false;
         if (gameRef.GAME){
             gameRef.GAME = false;
             gameRef.gameObject.SetActive(false);
@@ -101,6 +111,7 @@ public class ButtonBehaviour : MonoBehaviour {
     void Start() {
         isMainMenuOpen = true;
         isPauseMenuOpen = false;
+        isScanMenuOpen = false;
         isEnemyScanned = false;
         selectedEnemyRef.text = defaultEnemy;
         gameRef.gameObject.SetActive(false);
@@ -112,6 +123,7 @@ public class ButtonBehaviour : MonoBehaviour {
         //  enable/disable the main menu
         mainMenuCanvasRef.SetActive(isMainMenuOpen);
         pauseMenuCanvasRef.SetActive(isPauseMenuOpen);
+        scanMenuCanvasRef.SetActive(isScanMenuOpen);
 
         scannedEnemy = "Freddy Fazbear";
         selectedEnemyRef.text = isEnemyScanned ? scannedEnemy : defaultEnemy;

@@ -227,7 +227,6 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1398778696}
-  - {fileID: 1644438961}
   m_Father: {fileID: 1199513375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -940,7 +939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &513608340
 RectTransform:
   m_ObjectHideFlags: 0
@@ -954,6 +953,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1621652775}
+  - {fileID: 1644438961}
   m_Father: {fileID: 1685196043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2500,7 +2500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1598209706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2703,15 +2703,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644438960}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -613.72986}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 184771475}
+  m_Father: {fileID: 513608340}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 65.1}
+  m_AnchoredPosition: {x: 53.60315, y: -630.70996}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644438962
@@ -2843,10 +2843,12 @@ MonoBehaviour:
   selectedEnemyRef: {fileID: 1644438962}
   mainMenuCanvasRef: {fileID: 1199513371}
   pauseMenuCanvasRef: {fileID: 760016290}
+  scanMenuCanvasRef: {fileID: 513608339}
   gameRef: {fileID: 878962179}
   debugStrip: {fileID: 1598209706}
   isMainMenuOpen: 0
   isPauseMenuOpen: 0
+  isScanMenuOpen: 0
   isEnemyScanned: 0
   defaultEnemy: your mother
   scannedEnemy: freddy fazbear
@@ -2950,6 +2952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageManagerRef: {fileID: 1747189224}
   OBJECT: {fileID: 1435229333526019817, guid: 86d74758ff761204ca1a656540ebf81f, type: 3}
+  SelectedEnemyRef: {fileID: 0}
   debugStripRef: {fileID: 1598209706}
 --- !u!114 &1747189224
 MonoBehaviour:
