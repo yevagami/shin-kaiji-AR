@@ -23,7 +23,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 13966803716559270422
       m_GuidHigh: 1122947276577442155
-    m_Size: {x: 0, y: 0}
+    m_Size: {x: 0.3, y: 0.3}
     m_SpecifySize: 0
     m_Name: Doom
     m_Texture: {fileID: 0}

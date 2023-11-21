@@ -22,7 +22,7 @@ public class ButtonBehaviour : MonoBehaviour {
     [SerializeField] bool isMainMenuOpen;
     [Tooltip("is the pause menu shown? is it active?")]
     [SerializeField] bool isPauseMenuOpen;
-    
+
     #region abstract THIS
     //  temp 'hard code' (its not a real reference)
     public bool isEnemyScanned;
@@ -60,15 +60,18 @@ public class ButtonBehaviour : MonoBehaviour {
 
     public void LeaveButtonCallback()
     {
+        /*
         if (Application.isEditor) {
             debugStrip.log("quitting the editor");
             Debug.Log("quitting the editor");
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
         } else {
-            debugStrip.log("quitting game");
-            Debug.Log("this is never seen");
-            Application.Quit();
+            
         }
+        */
+        debugStrip.log("quitting game");
+        Debug.Log("this is never seen");
+        Application.Quit();
     }
 
     public void ResumeGameButtonCallback() {
@@ -80,6 +83,7 @@ public class ButtonBehaviour : MonoBehaviour {
         isPauseMenuOpen = false;
         isEnemyScanned = false;
         selectedEnemyRef.text = defaultEnemy;
+        
     }
 
     void Update()
